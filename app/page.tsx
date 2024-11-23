@@ -26,7 +26,7 @@ export default function RanksPage() {
           </div>
           <h2 className="text-lg font-semibold mb-2">No exercise yet</h2>
           <p className="text-sm text-muted-foreground">
-            Click on "+" icon to add your exercise
+            Click on &quot;+&quot; icon to add your exercise
           </p>
         </motion.div>
 

@@ -4,8 +4,13 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 
+type DeferredPrompt = {
+  prompt: () => void
+  userChoice: Promise<{ outcome: string }>
+}
+
 export function InstallPWA() {
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null)
+  const [deferredPrompt, setDeferredPrompt] = useState<DeferredPrompt | null>(null)
   const [isInstallable, setIsInstallable] = useState(false)
 
   useEffect(() => {
