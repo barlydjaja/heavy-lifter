@@ -13,7 +13,7 @@ export default function RanksPage() {
 
   if (exercises.length === 0) {
     return (
-      <div className="flex-1 relative h-[calc(100vh-5rem)] p-4 flex mb-4 flex-col items-center justify-center mb-20">
+      <div className="flex-1 relative h-[calc(100vh-5rem)] p-4 flex flex-col items-center justify-center mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
