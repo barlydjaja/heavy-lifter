@@ -104,7 +104,7 @@ export default function SettingsPage() {
   const bmi = calculateBMI()
 
   return (
-    <div className="p-4 space-y-6 pb-24">
+    <div className="flex-1 p-4 space-y-6 mb-20">
       <Button variant="ghost" onClick={() => router.back()}>
         <ArrowLeft className="mr-2 h-4 w-4" />
         Back

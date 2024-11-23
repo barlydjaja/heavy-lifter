@@ -91,11 +91,11 @@ export function BMIMeter({ bmi }: BMIMeterProps) {
           <div>16</div>
           <div>Underweight</div>
         </div>
-        <div className="absolute left-[50%] translate-x-[-50%] text-center">
+        <div className="absolute top-0 left-[50%] translate-x-[-50%] text-center">
           <div>25.5</div>
           <div>Normal</div>
         </div>
-        <div className="absolute right-0 text-center">
+        <div className="absolute top-0 right-0 text-center">
           <div>35</div>
           <div>Obese</div>
         </div>

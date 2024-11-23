@@ -7,6 +7,7 @@ import { Download } from "lucide-react"
 type DeferredPrompt = {
   prompt: () => void
   userChoice: Promise<{ outcome: string }>
+  preventDefault: () => void
 }
 
 export function InstallPWA() {
@@ -21,18 +22,20 @@ export function InstallPWA() {
       return
     }
 
-    const handler = (e: any) => {
+    const handler = (e: DeferredPrompt) => {
       // Prevent Chrome 67 and earlier from automatically showing the prompt
       e.preventDefault()
+
       // Stash the event so it can be triggered later
-      setDeferredPrompt(e)
+      setDeferredPrompt(e as unknown as DeferredPrompt)
       setIsInstallable(true)
     }
 
-    window.addEventListener('beforeinstallprompt', handler)
+    // Need to declare beforeinstallprompt event type since it's not in standard WindowEventMap
+    window.addEventListener('beforeinstallprompt', handler as unknown as EventListener)
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handler)
+      window.removeEventListener('beforeinstallprompt', handler as unknown as EventListener)
     }
   }, [])
 

@@ -31,7 +31,7 @@ export function BottomNav() {
             <Button
               key={tab.path}
               variant="ghost"
-              className="relative flex-1 flex flex-col items-center py-2 gap-1"
+              className="relative flex-1 flex flex-col items-center py-4 gap-1"
               onClick={() => router.push(tab.path)}
             >
               {isActive && (

@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <head>
         <meta name="application-name" content="Heavy Lifter" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -41,18 +41,18 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} bg-background`}>
+      <body className={`${inter.className} bg-background h-full`}>
+        {/* Main content */}
         <MobileContainer>
-          <div className="flex justify-end mb-4">
-            <InstallPWA />
-          </div>
-
           {children}
-
-          <BottomNav />
-          <Toaster />
-          <PWAPrompt />
         </MobileContainer>
+
+        <BottomNav />
+    
+        {/* Toaster and PWA prompt */}
+        <Toaster />
+        <PWAPrompt />
+        <InstallPWA />
       </body>
     </html>
   )

@@ -41,12 +41,8 @@ export default function ExerciseDetail({ params }: { params: { name: string } })
     record.weight > max.weight ? record : max
   , exercise.records[0])
 
-  const handleDelete = () => {
-    router.back()
-  }
-
   return (
-    <div className="p-4 space-y-6 pb-24">
+    <div className="flex-1 p-4 space-y-6 mb-20">
       {/* Header */}
       <div className="flex justify-between items-center">
         <Button variant="ghost" onClick={() => router.back()}>
