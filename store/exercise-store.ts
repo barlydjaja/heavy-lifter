@@ -23,6 +23,8 @@ interface ExerciseStore {
   addExerciseRecord: (name: string, weight: number, date: string) => void;
   updateUserSettings: (settings: Partial<UserSettings>) => void;
   convertWeight: (weight: number, from: Metrics, to: Metrics) => number;
+  renameExercise: (oldName: string, newName: string) => void;
+  deleteExercise: (name: string) => void;
 }
 
 export const useExerciseStore = create<ExerciseStore>()(

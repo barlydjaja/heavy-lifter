@@ -23,7 +23,7 @@ export function DeleteExerciseDialog({
   const { toast } = useToast()
   const [confirmText, setConfirmText] = useState("")
   const { deleteExercise } = useExerciseStore()
-  
+
   const handleDelete = () => {
     if (confirmText === "delete") {
       deleteExercise(exerciseName)
