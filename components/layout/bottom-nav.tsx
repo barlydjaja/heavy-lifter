@@ -12,7 +12,7 @@ export function BottomNav() {
   const tabs = [
     {
       name: "Ranks",
-      path: "/ranks",
+      path: "/",
       icon: Trophy
     },
     {

@@ -64,7 +64,7 @@ export function AddExerciseDialog({ defaultExercise, open: controlledOpen, onOpe
           </Button>
         ) : (
           <Button
-            className="fixed bottom-20 right-4 h-14 w-14 rounded-full shadow-lg"
+            className="absolute bottom-0 right-4 h-14 w-14 rounded-full shadow-lg"
             size="icon"
           >
             <Plus className="h-6 w-6" />

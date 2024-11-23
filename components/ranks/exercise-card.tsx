@@ -53,7 +53,7 @@ export function ExerciseCard({ exercise, metrics }: ExerciseCardProps) {
       >
         <Card 
           className="cursor-pointer hover:shadow-md transition-shadow"
-          onClick={() => router.push(`/ranks/${encodeURIComponent(exercise.name)}`)}
+          onClick={() => router.push(`/${encodeURIComponent(exercise.name)}`)}
         >
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-lg">{exercise.name}</CardTitle>

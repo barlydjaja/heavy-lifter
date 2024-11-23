@@ -22,7 +22,7 @@ export default function ExerciseDetail({ params }: { params: { name: string } })
   const exercise = exercises.find(e => e.name === exerciseName)
 
   const handleDeleteSuccess = () => {
-    router.push('/ranks')
+    router.push('/')
   }
   
   if (!exercise) {
