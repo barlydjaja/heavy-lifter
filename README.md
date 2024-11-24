@@ -1,4 +1,4 @@
-# Heavy Lifter 🏋️‍♂️
+# [Heavy Lifter 🏋️‍♂️](https://heavy.thereaction.io)
 
 A modern Progressive Web App (PWA) for tracking your weightlifting journey. Built with Next.js, TypeScript, and Tailwind CSS.
 
