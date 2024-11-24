@@ -6,6 +6,8 @@ import { BottomNav } from "@/components/layout/bottom-nav"
 import { Toaster } from "@/components/ui/toaster"
 import { PWAPrompt } from "@/components/pwa/pwa-prompt"
 import { InstallPWA } from "@/components/pwa/install-pwa-button"
+import { GoogleAnalytics } from "@next/third-parties/google"
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -30,6 +32,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const env = process.env.NODE_ENV || 'production';
+
   return (
     <html lang="en" className="h-full">
       <head>
@@ -52,6 +56,8 @@ export default function RootLayout({
         <Toaster />
         <PWAPrompt />
         <InstallPWA />
+
+        {env === 'production' && <GoogleAnalytics gaId="G-12N3YC11Y7" />}
       </body>
     </html>
   )
