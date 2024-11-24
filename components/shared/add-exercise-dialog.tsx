@@ -173,7 +173,6 @@ export function AddExerciseDialog({ defaultExercise, open: controlledOpen, onOpe
                       setCalendarOpen(false)
                     }
                   }}
-                  initialFocus
                 />
               </PopoverContent>
             </Popover>
