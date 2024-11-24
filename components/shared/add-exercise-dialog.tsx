@@ -43,7 +43,7 @@ export function AddExerciseDialog({ defaultExercise, open: controlledOpen, onOpe
     
     addExerciseRecord(
       exerciseName,
-      parseFloat(weight),
+      parseFloat(weight.replaceAll(',', '.')),
       date.toISOString()
     )
     
@@ -144,12 +144,19 @@ export function AddExerciseDialog({ defaultExercise, open: controlledOpen, onOpe
           {/* Weight Input */}
           <div className="space-y-2">
             <Input
-              inputMode="numeric"
+              inputMode="decimal"
+              type="number"
               pattern="[0-9]*"
+              step="0.01"
+              lang="en-US"
               suffix={userSettings.metrics}
               placeholder={`Weight (${userSettings.metrics})`}
               value={weight}
-              onChange={(e) => setWeight(e.target.value)}
+              onChange={(e) => {
+                console.log('we:', Number(e.target.value)); 
+                console.log('typeof : ', typeof e.target.value)
+                setWeight(e.target.value)
+              }}
             />
           </div>
 

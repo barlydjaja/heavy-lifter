@@ -3,8 +3,8 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { useExerciseStore } from "@/store/exercise-store"
-import { ExerciseGraph } from "@/components/shared/exercise-graph"
-import { ExerciseTable } from "@/components/shared/exercise-table"
+import { ExerciseGraph } from "@/components/ranks-name/exercise-graph"
+import { ExerciseTable } from "@/components/ranks-name/exercise-table"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Pencil } from "lucide-react"
 import { motion } from "framer-motion"
@@ -97,7 +97,8 @@ export default function ExerciseDetail({ params }: { params: { name: string } })
         transition={{ delay: 0.2 }}
       >
         <h2 className="text-lg font-semibold mb-4">History</h2>
-        <ExerciseTable 
+        <ExerciseTable
+          exerciseName={exerciseName}
           data={exercise.records} 
           metrics={userSettings.metrics} 
         />

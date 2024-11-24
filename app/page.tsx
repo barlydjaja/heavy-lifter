@@ -43,6 +43,7 @@ export default function RanksPage() {
   return (
     <div className="flex-1 relative">
       <div className="p-4 space-y-4 mb-20">
+        <h1 className="text-2xl font-semibold mb-4">Your Personal Bests</h1>
         {exercises.map((exercise) => (
           <ExerciseCard
             key={exercise.name}

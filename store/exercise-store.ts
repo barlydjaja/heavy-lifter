@@ -25,6 +25,7 @@ interface ExerciseStore {
   convertWeight: (weight: number, from: Metrics, to: Metrics) => number;
   renameExercise: (oldName: string, newName: string) => void;
   deleteExercise: (name: string) => void;
+  deleteExerciseRecord: (name: string, deleteRecordIndex: number) => void;
 }
 
 export const useExerciseStore = create<ExerciseStore>()(
@@ -87,6 +88,27 @@ export const useExerciseStore = create<ExerciseStore>()(
         set((state) => ({
           exercises: state.exercises.filter(e => e.name !== name)
         }))
+      },
+
+      deleteExerciseRecord: (name: string, deleteRecordIndex: number) => {
+        set((state) => {
+          const exercises = [...state.exercises];
+          const existingExercise = exercises.find(e => e.name === name);
+          
+          if (existingExercise) {
+            // If there is only one record, delete the entire exercise
+            if (existingExercise.records.length <= 1) {
+              return { exercises: exercises.filter(e => e.name !== name) }
+            }
+
+            existingExercise.records.sort((a, b) => 
+              new Date(b.date).getTime() - new Date(a.date).getTime()
+            )
+            existingExercise.records = existingExercise.records.filter((_,existingExerciseIndex) => existingExerciseIndex !== deleteRecordIndex)
+          }
+          
+          return { exercises };
+        });
       }
     }),
     {
