@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Heavy Lifter 🏋️‍♂️
 
-## Getting Started
+A modern Progressive Web App (PWA) for tracking your weightlifting journey. Built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 📱 **Progressive Web App (PWA)** - Install on any device for a native app-like experience
+- 📊 **Visual Progress Tracking** - Beautiful graphs to visualize your strength gains
+- 💪 **Exercise Management** - Add, rename, and delete exercises
+- 📝 **Record Keeping** - Log your weights and track personal bests
+- 🔄 **Unit Conversion** - Support for both metric (kg) and imperial (lbs) units
+- 📏 **BMI Calculator** - Track your Body Mass Index with a visual meter
+- 📱 **Mobile-First Design** - Optimized for the device you use most at the gym
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [heavy.thereaction.io](http://heavy.thereaction.io) with your browser
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Installing as a PWA
 
-## Learn More
+### iOS
+1. Open Safari
+2. Navigate to the app
+3. Tap the Share button
+4. Select "Add to Home Screen"
 
-To learn more about Next.js, take a look at the following resources:
+### Android
+1. Open Chrome
+2. Navigate to the app
+3. Tap the menu (three dots)
+4. Select "Install App"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Built With
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js 14](https://nextjs.org/) - React Framework
+- [TypeScript](https://www.typescriptlang.org/) - Type Safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Zustand](https://github.com/pmndrs/zustand) - State Management
+- [Recharts](https://recharts.org/) - Data Visualization
+- [Framer Motion](https://www.framer.com/motion/) - Animations
+- [Radix UI](https://www.radix-ui.com/) - UI Components
+- [date-fns](https://date-fns.org/) - Date Manipulation
 
-## Deploy on Vercel
+## 📦 Key Features Explained
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Exercise Tracking
+- Add new exercises with custom names
+- Record weights and dates for each lift
+- View personal bests and progress over time
+- Delete or rename exercises as needed
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Progress Visualization
+- Line graphs showing weight progression
+- Historical data in a sortable table
+- Personal best highlights
+
+### Settings & Preferences
+- Switch between kg and lbs
+- Input height and weight for BMI calculation
+- Customizable units system
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit issues and pull requests.
+
+## 📄 License
+
+This project is open source and available under the MIT license.
+
+---
+
+Built with 💪 by weightlifting enthusiasts, for weightlifting enthusiasts.
