@@ -42,8 +42,6 @@ export function BMIMeter({ bmi }: BMIMeterProps) {
     const percentage = ((bmi - range.min) / (range.max - range.min)) * 
       (range.rangeEnd - range.rangeStart) + range.rangeStart
 
-    console.log(Math.min(Math.max(percentage, 0), 100))
-
     // Clamp the value between 0 and 100
     return Math.min(Math.max(percentage, 0), 100)
   }

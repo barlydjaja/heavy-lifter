@@ -23,7 +23,7 @@ export function BottomNav() {
   ]
 
   return (
-    <div className="fixed max-w-md bottom-0 left-0 right-0 max-w-mobile mx-auto bg-background border-t">
+    <div className="fixed max-w-md bottom-0 left-0 right-0 mx-auto bg-background border-t">
       <div className="flex items-center justify-around p-2">
         {tabs.map((tab) => {
           const isActive = pathname.startsWith(tab.path)

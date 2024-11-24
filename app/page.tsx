@@ -13,7 +13,7 @@ export default function RanksPage() {
 
   if (exercises.length === 0) {
     return (
-      <div className="flex-1 relative">
+      <div className="relative">
         <div className="h-[calc(100vh-5rem)] p-4 flex flex-col items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export default function RanksPage() {
   }
 
   return (
-    <div className="flex-1 relative">
+    <main className="relative">
       <div className="p-4 space-y-4 mb-20">
         <h1 className="text-2xl font-semibold mb-4">Your Personal Bests</h1>
         {exercises.map((exercise) => (
@@ -54,6 +54,6 @@ export default function RanksPage() {
       </div>
 
       <AddExerciseDialog />
-    </div>
+    </main>
   )
 }

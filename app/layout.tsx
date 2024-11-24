@@ -41,14 +41,13 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.className} bg-background h-full`}>
+      <body className={`${inter.className} bg-background bg-gray-100`}>
         {/* Main content */}
         <MobileContainer>
           {children}
+          <BottomNav />
         </MobileContainer>
 
-        <BottomNav />
-    
         {/* Toaster and PWA prompt */}
         <Toaster />
         <PWAPrompt />

@@ -63,12 +63,17 @@ export function AddExerciseDialog({ defaultExercise, open: controlledOpen, onOpe
             Add Record
           </Button>
         ) : (
-          <Button
-            className="absolute bottom-20 right-4 h-14 w-14 rounded-full shadow-lg"
-            size="icon"
-          >
-            <Plus className="h-6 w-6" />
-          </Button>
+          <div className="fixed max-w-md bottom-20 left-0 right-0 mx-auto">
+            <div className="relative">
+              <Button
+                className="absolute bottom-0 right-4 border-t h-14 w-14 rounded-full shadow-lg"
+                size="icon"
+              >
+                <Plus className="h-6 w-6" />
+              </Button>
+            </div>
+
+          </div>
         )}
       </DialogTrigger>
       <DialogContent>
@@ -145,18 +150,12 @@ export function AddExerciseDialog({ defaultExercise, open: controlledOpen, onOpe
           <div className="space-y-2">
             <Input
               inputMode="decimal"
-              type="number"
               pattern="[0-9]*"
-              step="0.01"
               lang="en-US"
               suffix={userSettings.metrics}
               placeholder={`Weight (${userSettings.metrics})`}
               value={weight}
-              onChange={(e) => {
-                console.log('we:', Number(e.target.value)); 
-                console.log('typeof : ', typeof e.target.value)
-                setWeight(e.target.value)
-              }}
+              onChange={(e) => setWeight(e.target.value)}
             />
           </div>
 
