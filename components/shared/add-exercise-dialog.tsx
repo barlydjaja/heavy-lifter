@@ -64,7 +64,7 @@ export function AddExerciseDialog({ defaultExercise, open: controlledOpen, onOpe
           </Button>
         ) : (
           <Button
-            className="sticky bottom-20 left-96 h-14 w-14 rounded-full shadow-lg"
+            className="absolute bottom-20 right-4 h-14 w-14 rounded-full shadow-lg"
             size="icon"
           >
             <Plus className="h-6 w-6" />
@@ -144,7 +144,9 @@ export function AddExerciseDialog({ defaultExercise, open: controlledOpen, onOpe
           {/* Weight Input */}
           <div className="space-y-2">
             <Input
-              type="number"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              suffix={userSettings.metrics}
               placeholder={`Weight (${userSettings.metrics})`}
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
