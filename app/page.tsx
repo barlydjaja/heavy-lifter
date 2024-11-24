@@ -39,14 +39,16 @@ export default function RanksPage() {
   }
 
   return (
-    <div className="flex-1 relative p-4 space-y-4 mb-20">
-      {exercises.map((exercise) => (
-        <ExerciseCard
-          key={exercise.name}
-          exercise={exercise}
-          metrics={userSettings.metrics}
-        />
-      ))}
+    <div className="flex-1 relative">
+      <div className="p-4 space-y-4 mb-20">
+        {exercises.map((exercise) => (
+          <ExerciseCard
+            key={exercise.name}
+            exercise={exercise}
+            metrics={userSettings.metrics}
+          />
+        ))}
+      </div>
 
       <AddExerciseDialog />
     </div>
